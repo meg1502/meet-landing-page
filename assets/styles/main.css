@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+:root {
+    --color-cyan-600: #4d96a9;
+    --color-cyan-300: #8fe3f9;
+    --color-purple-600: #855fb1;
+    --color-purple-300: #d9b8ff;
+    --color-slate-900: #28283d;
+    --color-slate-600: #87879d;
+    --color-white: #fafafa;
+    --font-sans: "Red Hat Display", sans-serif;
+    --spacing-50: 0.25rem;
+    --spacing-100: 0.5rem;
+    --spacing-200: 1rem;
+    --spacing-300: 1.5rem;
+    --spacing-400: 2rem;
+    --spacing-500: 2.5rem;
+    --spacing-700: 3.5rem;
+    --spacing-800: 4rem;
+    --spacing-900: 4.5rem;
+    --spacing-1000: 5rem;
+    --spacing-1400: 7rem;
+}
+
+.text-preset-1 {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 1.1;
+}
+
+.text-preset-2 {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.text-preset-3 {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.1;
+    letter-spacing: 0.5rem;
+}
+
+.text-preset-4 {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 1.125rem;
+    line-height: 1.1;
+}
+
+.text-preset-5 {
+    font-family: var(--font-sans);
+    font-weight: 900;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 64rem) {
+   .text-preset-1 {
+        font-size: 3rem;
+    }
+
+    .text-preset-2 {
+        font-size: 2.25rem;
+    }
+
+    .text-preset-3 {
+        font-size: 0.875rem;
+    }
+
+    .text-preset-4 {
+        font-size: 1rem;
+    } 
+}
+
+@media screen and (max-width: 48rem) {
+   .text-preset-1 {
+        font-size: 2.5rem;
+    }
+
+    .text-preset-2 {
+        font-size: 2rem;
+    }
+
+    .text-preset-3 {
+        font-size: 0.75rem;
+    }
+
+}
