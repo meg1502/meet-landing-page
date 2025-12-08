@@ -7,6 +7,7 @@
     --color-purple-300: #d9b8ff;
     --color-slate-900: #28283d;
     --color-slate-600: #87879d;
+    --color-slate-300: #d1d1df;
     --color-white: #fafafa;
     --font-sans: "Red Hat Display", sans-serif;
     --spacing-50: 0.25rem;
@@ -103,6 +104,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: var(--spacing-800);
 }
 
 footer {
@@ -249,4 +251,31 @@ footer {
     background-size: cover;
     color: var(--color-white);
     align-items: center;
+}
+
+.number-circle {
+    border: var(--color-slate-300) solid 1px;
+    display: grid;
+    place-items: center;
+    width: var(--spacing-700);
+    height: var(--spacing-700);
+    border-radius: var(--spacing-400);
+    position: relative;
+    margin-top: var(--spacing-700);
+}
+
+.number-circle::before {
+    border: var(--color-slate-300) solid 0.5px;
+    height: var(--spacing-1000);
+    width: 0;
+    position: absolute;
+    bottom: 100%;
+    content: '';
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.footer-container .number-circle {
+    margin-bottom: -2rem;
+    background-color: var(--color-white);
 }
