@@ -245,12 +245,15 @@ footer {
 
 .section.section-2  {
     width: 100%;
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     background: linear-gradient(rgba(77,150,168, 0.75), rgba(77,150,168, 0.75)), url("../images/desktop/image-footer.jpg");
     background-size: cover;
     color: var(--color-white);
     align-items: center;
+    padding: var(--spacing-1400) var(--spacing-1000);
+    gap: var(--spacing-400);
 }
 
 .number-circle {
