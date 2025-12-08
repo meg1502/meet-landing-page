@@ -95,6 +95,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: var(--color-white);
+    color: var(--color-slate-600;)
 }
 
 main {
@@ -136,18 +138,26 @@ footer {
 
 .hero-title {
     grid-area: hero-title;
+    color: var(--color-slate-900);
 }
 
 .hero-text {
     grid-area: hero-text;
+    color: var(--color-slate-600);
 }
 
 .download-button {
     grid-area: download-button;
+    background-color: var(--color-cyan-600);
+    color: white;
+    border-radius: 1.8125rem;
 }
 
 .faq-button {
     grid-area: faq-button;
+    background-color: var(--color-purple-600);
+    color: white;
+    border-radius: 1.8125rem;
 }
 
 .section-1 {
@@ -184,6 +194,7 @@ footer {
 
 .sub-title-1 {
     grid-area: sub-title;
+    color: var(--color-cyan-600);
 }
 
 .title-1 {
@@ -192,6 +203,7 @@ footer {
 
 .description-1 {
     grid-area: description;
+    color: var(--color-slate-600);
 }
 
 .footer-container {
@@ -205,4 +217,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-around;
+    background: linear-gradient(rgba(77,150,168, 0.5), rgba(77,150,168, 0.5)), url("../images/desktop/image-footer.jpg");
+    background-size: cover;
+    color: var(--color-white);
 }
