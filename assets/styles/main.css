@@ -118,12 +118,12 @@ footer {
 }
 
 .section-hero {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr var(--spacing-800) 1fr 1fr var(--spacing-800) 1fr;
     grid-template-rows: 3fr 2fr 1fr;
     grid-template-areas: 
-        "hero-left hero-title hero-title hero-right"
-        "hero-left hero-text hero-text hero-right"
-        "hero-left download-button faq-button hero-right"
+        "hero-left . hero-title hero-title . hero-right"
+        "hero-left . hero-text hero-text . hero-right"
+        "hero-left . download-button faq-button . hero-right";
 }
 
 .hero-image-mobile {
@@ -204,6 +204,8 @@ footer {
 .img-tile {
     width: 16rem;
     height: 16rem;
+    border-radius: var(--spacing-100);
+    justify-self: center;
 }
 
 .img-tile-1 {
@@ -223,12 +225,19 @@ footer {
 }
 
 .sub-title-1 {
+    align-self: end;
+    justify-self: center;
     grid-area: sub-title;
     color: var(--color-cyan-600);
+
+    padding-top: var(--spacing-200);
 }
 
 .title-1 {
+    align-self: start;
+    justify-self: center;
     grid-area: main-title;
+    color: var(--color-slate-900);
 }
 
 .description-1 {
