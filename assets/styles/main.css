@@ -23,6 +23,16 @@
     --spacing-1400: 7rem;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, picture, video, svg {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Entfernt kleine Lücken unter Bildern */
+}
+
 .text-preset-1 {
     font-family: var(--font-sans);
     font-weight: 900;
@@ -98,6 +108,7 @@ body {
     align-items: center;
     background-color: var(--color-white);
     color: var(--color-slate-600);
+    text-align: center;
 }
 
 main {
@@ -126,8 +137,10 @@ footer {
         "hero-left . download-button faq-button . hero-right";
 }
 
+
 .hero-image-mobile {
     display: none;
+    grid-area: hero-full;
 }
 
 .hero-image-left {
@@ -290,4 +303,100 @@ footer {
 .footer-container .number-circle {
     margin-bottom: -2rem;
     background-color: var(--color-white);
+}
+
+
+@media screen and (max-width: 76rem) {
+    .section-hero {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 5fr 3fr 1fr 1fr ;
+    grid-template-areas: 
+        "hero-full hero-full hero-full hero-full "
+        ". hero-title hero-title ."
+        ". hero-text hero-text ."
+        ". download-button faq-button .";
+        place-items: center;
+        justify-items: center;
+    }
+    .hero-image-left {
+        display: none;
+    }
+
+    .hero-image-right {
+        display: none;
+    }
+
+    .hero-image-mobile {
+        display: inherit;
+        width: 120%; /* Beispiel: Etwas breiter als der Screen */
+        max-width: none; /* Hebt die globale Bremse auf */
+        align-self: center;
+    }
+
+    .section.section-2 {
+        flex-direction: column;
+        gap: 0;
+        padding: var(--spacing-800) var(--spacing-400);
+    }
+
+    .section.section-2 {
+        background: linear-gradient(rgba(77,150,168, 0.75), rgba(77,150,168, 0.75)), url("../images/tablet/image-footer.jpg");
+    }
+}
+
+@media screen and (max-width: 48rem) {
+   
+    .section-hero {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .hero-image-mobile {
+        width: 120%; /* Beispiel: Etwas breiter als der Screen */
+        max-width: none; /* Hebt die globale Bremse auf */
+        align-self: center;
+    }
+
+  .section-1 {
+        display: grid;
+        /* Wir bleiben bei 2 Spalten für die Bilder */
+        grid-template-columns: 1fr 1fr;
+        
+        /* Die Zeilenhöhe passt sich dem Inhalt an */
+        grid-template-rows: auto;
+        
+        /* Hier definieren wir, dass der Text unten die volle Breite (beide Spalten) nutzt */
+        grid-template-areas: 
+            "image-1 image-2"
+            "image-3 image-4"
+            "sub-title sub-title"
+            "main-title main-title"
+            "description description";
+            
+        gap: var(--spacing-300); /* Abstand zwischen den Kacheln */
+        width: 100%;
+        padding: 0 var(--spacing-400); /* Wichtig: Abstand zum Rand des Handys */
+        margin-bottom: var(--spacing-400);
+    }
+
+    /* Damit die Texte schön mittig sitzen und nicht links kleben */
+    .sub-title-1, 
+    .title-1, 
+    .description-1 {
+        text-align: center;   /* Textinhalt zentrieren */
+        align-self: center;   /* Vertikal in der Grid-Zeile zentrieren */
+        justify-self: center; /* Horizontal in der Grid-Zeile zentrieren */
+        width: 100%;          /* Volle Breite nutzen */
+    }
+
+   
+    /* Sicherheitsnetz für die Bilder */
+    .img-tile {
+        width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+    .section.section-2 {
+        background: linear-gradient(rgba(77,150,168, 0.75), rgba(77,150,168, 0.75)), url("../images/mobile/image-footer.jpg");
+    }
 }
