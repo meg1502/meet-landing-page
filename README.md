@@ -27,8 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://meet-landing-page-blue.vercel.app/](https://meet-landing-page-blue.vercel.app/)
 
 ## My process
 
@@ -42,6 +41,5 @@ Users should be able to:
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - [meg1502](https://meg1502.github.io)
+- Frontend Mentor - [@meg1502](https://www.frontendmentor.io/profile/meg1502)
